@@ -380,12 +380,12 @@ nav  .fas{
     max-width: 100%; 
     }
     .header-text {
-        margin-top: 200%;
+        margin-top: 170%;
         font-size: 18px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 668px) {
         .header-text {
-            margin-top: 200%; /* Adjust this value for mobile view */
+            margin-top: 160%; /* Adjust this value for mobile view */
         }
     }
     
@@ -396,6 +396,7 @@ nav  .fas{
         display: flex;
         justify-content: space-between; /* This will push the logo to the left and the menu to the right */
         align-items: center;
+        font-size: 24px;
     }
     
     nav ul {
@@ -411,6 +412,7 @@ nav  .fas{
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        
     }
     
     nav ul li {
