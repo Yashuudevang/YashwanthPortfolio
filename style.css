@@ -368,11 +368,11 @@ nav  .fas{
 
      #header {
     background-image: url(images/ph\ \(2\).jpg);
-    background-size: cover; /* Or use 'contain' if you want the image contained within the header */
+/*     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 400px; /* Adjust this height as needed */
+    height: 400px;  */
     }
     
     .header-text {
