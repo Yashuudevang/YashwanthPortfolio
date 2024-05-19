@@ -385,7 +385,7 @@ nav  .fas{
     }
     @media (max-width: 768px) {
         .header-text {
-            margin-top: 180%; /* Adjust this value for mobile view */
+            margin-top: 200%; /* Adjust this value for mobile view */
         }
     }
     
