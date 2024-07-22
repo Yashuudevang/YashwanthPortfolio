@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 body {
-    background: #080808;
-    color: #fff;
+    background: #0F0B08;
+    color: #ffffff;
 }
 
 #header {
@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    padding: 10px 10%;
+    padding: 20px 10%;
 }
 
 nav {
@@ -34,7 +34,8 @@ nav {
 .logo {
     width: 250px;
     align-content: flex-start;
-    align-self: left;
+    align-self: right;
+    width: 120px;
 }
 
 nav ul li {
@@ -294,10 +295,7 @@ nav ul li a:hover::after {
     color: #fff;
     transition: background 0.5s;
 }
-.btn:hover{
-    background: #ff004f;
 
-}
 /* -----------------contact----------------------- */
 .contact-left{
     flex-basis: 35%;
@@ -480,6 +478,7 @@ nav  .fas{
     .stay-tuned{
         text-align: left;
     }
+    
 }
 
 #msg {
