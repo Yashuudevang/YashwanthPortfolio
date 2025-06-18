@@ -229,21 +229,31 @@ nav ul li a:hover::after {
 #portfolio {
     padding: 50px 0;
 }
-.work-list{
-    display:flex;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 40px;
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 48px;
     margin-top: 50px;
+    justify-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif /* Set font for work list */
 }
 .work{
-    border-radius: 10px;
+    border-radius: 14px;
     position: relative;
     overflow: hidden;
-    width: 200px;
+    width: 190px;      /* Bigger width */
+    height: 310px;     /* Bigger height */
+    background: #222;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .work img{
     width: 100%;
-    border-radius: 10px;
+    height: 350px;     /* Bigger image height */
+    object-fit: cover;
+    border-radius: 14px 14px 0 0;
     display: block;
     transition: transform 0.5s;
 }
@@ -481,8 +491,189 @@ nav  .fas{
     
 }
 
+/* Responsive styles for mobile */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    h1, .sub-title {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    /* Skills section */
+    .services-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        padding-left: 16px;
+    padding-right: 16px;
+    }
+    .services-list div {
+        display:  flex;
+        /* width: 90vw; */
+        min-width: unset;
+        max-width: 100%;
+        font-size: 1.1rem;
+        padding: 30px 240px;
+        margin: 0 100px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 24px;
+    }
+    .services-list div i {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    /* Work/Portfolio section */
+    .work-list {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 24px;
+    }
+    .work {
+        width: 90vw;
+        height: auto;
+        min-width: unset;
+        max-width: 100%;
+    }
+    .work img {
+        height: 40vw;
+        min-height: 120px;
+        max-height: 200px;
+    }
+
+    /* General adjustments */
+    .btn {
+        font-size: 1rem;
+        padding: 10px 24px;
+    }
+
+    /* Adjust section spacing */
+    #portfolio, #services, #about, #contact {
+        padding: 24px 0;
+    }
+}
+
+/* Responsive: 2 works per row on mobile */
+@media only screen and (max-width: 600px) {
+    .work-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 24px;
+    }
+    .work {
+        width: 100%;
+        max-width: 100%;
+        min-width: unset;
+        margin: 0;
+    }
+}
+
+/* Responsive: 2 skills per row on mobile */
+@media only screen and (max-width: 600px) {
+    .services-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .services-list div {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        min-width: unset;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 18px 6px;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    .services-list div i {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
 #msg {
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+/* Add to your style.css */
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        text-align: left;
+        word-break: break-word;
+        margin: 16px 0 8px 0;
+    }
+    h1 span {
+        font-size: 1.5rem;
+        display: inline;
+    }
+}
+
+/* Make profile image responsive on mobile */
+@media only screen and (max-width: 600px) {
+    .about-col-1 img, .profile-img, .your-image-class {
+        width: 90vw;
+        max-width: 320px;
+        height: auto;
+        display: block;
+        margin: 0 auto 16px auto;
+        border-radius: 12px;
+    }
+    h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-top: 18px;
+        margin-bottom: 12px;
+        word-break: break-word;
+    }
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* or set a fixed height as needed */
+}
+
+.hero-img {
+    width: 100%;
+    height: 100vh; /* or set a fixed height as needed */
+    object-fit: cover;
+    display: block;
+}
+
+.hero-heading {
+    position: absolute;
+    top: 35%;      /* Adjust this value to move vertically */
+    left: 60%;     /* Adjust this value to move horizontally */
+    transform: translate(-50%, -50%);
+    color: #ffe699;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 2;
+    text-align: left;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px #000;
+}
+
+@media (max-width: 900px) {
+    .hero-heading {
+        font-size: 2rem;
+        left: 55%;
+        top: 40%;
+        white-space: normal;
+    }
 }
